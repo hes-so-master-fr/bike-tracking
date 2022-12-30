@@ -1,0 +1,22 @@
+{
+	"topicRulePayload": {
+		"sql": "SELECT * FROM 'some/topic'",
+		"ruleDisabled": false,
+		"awsIotSqlVersion": "2016-03-23",
+		"actions": [
+			{
+				"location": {
+					"roleArn": "arn:aws:geo:eu-central-1:026878793727:tracker/Bike-tracker-tracker",
+					"trackerName": "MyTracker",
+					"deviceId": "001",
+					"sampleTime": {
+						"value": "${timestamp()}",
+						"unit": "SECONDS"
+					},
+					"latitude": "-12.3456",
+					"longitude": "65.4321"
+				}
+			}
+		]
+	}
+}
