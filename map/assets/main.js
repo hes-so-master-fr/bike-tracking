@@ -46,7 +46,7 @@ function transformRequest(url, resourceType) {
 
 
 function timeConverter(UNIX_timestamp) {
-    let date = new Date(UNIX_timestamp * 1000);
+    let date = new Date(UNIX_timestamp);
     let time = date.toLocaleTimeString("en-GB") + " " + date.toLocaleDateString("en-GB")
     return time;
 }
