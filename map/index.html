@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
-    <title>Quick start tutorial</title>
+    <title>Tracker infos</title>
     <link href="https://unpkg.com/maplibre-gl@1.14.0/dist/maplibre-gl.css" rel="stylesheet" />
     <!-- Styles -->
     <link href="main.css" rel="stylesheet" />
-  </head>
-  
-  <body>
+</head>
+
+<body>
     <header>
-      <h1>Quick start tutorial</h1>
+        <h1>Tracker infos</h1>
     </header>
     <main>
-      <div id="map"></div>
-      <aside>
-        <h2>JSON Response</h2>
-        <pre id="response"></pre>
-      </aside>
+        <div id="map"></div>
+        <aside>
+            <h2>Latest updates</h2>
+            <pre id="response"></pre>
+            <div id="infos">
+                <ol id="trackerList" type="1"></ol>
+            </div>
+        </aside>
     </main>
-    <footer>This is a simple Amazon Location Service app. Pan and zoom. Click to see details about entities close to a point.</footer>
-     <!-- JavaScript dependencies -->
-     <script src="https://unpkg.com/maplibre-gl@1.14.0/dist/maplibre-gl.js"></script>
-     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1030.0.min.js"></script>
-     <script src="https://unpkg.com/@aws-amplify/core@3.7.0/dist/aws-amplify-core.min.js"></script>
-     
-     <!-- JavaScript for the app -->
-     <script src="./assets/main.js"></script>
-  </body>
+    <footer>App to see last location of device</footer>
+    <!-- JavaScript dependencies -->
+    <script src="https://unpkg.com/maplibre-gl@1.14.0/dist/maplibre-gl.js"></script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1030.0.min.js"></script>
+    <script src="https://unpkg.com/@aws-amplify/core@3.7.0/dist/aws-amplify-core.min.js"></script>
+
+    <!-- JavaScript for the app -->
+    <script src="./assets/main.js"></script>
+</body>
+
 </html>
