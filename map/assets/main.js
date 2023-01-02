@@ -54,6 +54,14 @@ function timeConverter(UNIX_timestamp) {
 async function addEvents(trackers, map) {
     let list = document.getElementById("trackerList");
 
+    trackers.sort((a, b) => {
+        let dateA = new Date(a.send_time)
+        let dateB = new Date(b.send_time)
+
+        if (dateA < dateB) return -1;
+        if (dateA > dateB) return 1;
+    });
+
     trackers.forEach(el => {
         let li = document.createElement("li")
         li.innerHTML = "msg: " + el.device_data.msg_type + "<br> pos (lat,long): (" + el.device_data.pos_latitude + "," + el.device_data.pos_longitude + ") " +
